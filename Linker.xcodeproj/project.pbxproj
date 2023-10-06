@@ -13,7 +13,7 @@
 		9F492E1C2ACFEE51009F4E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1A2ACFEE51009F4E01 /* Main.storyboard */; };
 		9F492E1E2ACFEE52009F4E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */; };
 		9F492E212ACFEE52009F4E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1F2ACFEE52009F4E01 /* LaunchScreen.storyboard */; };
-		9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9F492E292ACFFA90009F4E01 /* TextFieldEffects */; };
+		9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9F492E292ACFFA90009F4E01 /* TextFieldEffects */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
