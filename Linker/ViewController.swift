@@ -51,7 +51,9 @@ extension ViewController: UICollectionViewDataSource {
       cell.sliderButton.setTitle("Sign Up", for: .normal)
       cell.sliderButton.configuration?.imagePlacement = .trailing
       cell.sliderButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+
       cell.sliderButton.addTarget(self, action: #selector(slideToSignUpCell(_:)), for: .touchUpInside)
+      cell.actionButton.addTarget(self, action: #selector(didPressSignIn(_:)), for: .touchUpInside)
 
     } else if indexPath.row == 1 {
       cell.usernameTF.isHidden = false
@@ -59,10 +61,58 @@ extension ViewController: UICollectionViewDataSource {
       cell.sliderButton.setTitle("Sign In", for: .normal)
       cell.sliderButton.configuration?.imagePlacement = .leading
       cell.sliderButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+
       cell.sliderButton.addTarget(self, action: #selector(slideToSignInCell(_:)), for: .touchUpInside)
+      cell.actionButton.addTarget(self, action: #selector(didPressSignUp(_:)), for: .touchUpInside)
     }
     return cell
   }
+
+  @objc func didPressSignUp(_ sender: UIButton) {
+    let indexPath = IndexPath(row: 1, section: 0)
+    let cell = self.collectionView.cellForItem(at: indexPath) as! FormCell
+    guard let emailAddress = cell.emailTF.text,
+          let password = cell.passwordTF.text
+    else { return }
+
+    Auth.auth().createUser(withEmail: emailAddress, password: password) { result, error in
+      if error == nil {
+        guard let userId = result?.user.uid, let username = cell.usernameTF.text else { return }
+        self.dismiss(animated: true)
+        let reference = Database.database().reference()
+        let user = reference.child("users").child(userId)
+        let dataArray: [String:Any] = ["username": username]
+        user.setValue(dataArray)
+      } else {
+        self.displayError(errorText: error!.localizedDescription)
+      }
+    }
+  }
+
+  @objc func didPressSignIn(_ sender: UIButton) {
+    let indexPath = IndexPath(row: 0, section: 0)
+    let cell = self.collectionView.cellForItem(at: indexPath) as! FormCell
+    guard let emailAddress = cell.emailTF.text,
+          let password = cell.passwordTF.text
+    else { return }
+
+    Auth.auth().signIn(withEmail: emailAddress, password: password) { result, error in
+      if error == nil {
+        self.dismiss(animated: true)
+        print(result?.user)
+      } else {
+        self.displayError(errorText: error!.localizedDescription)
+      }
+    }
+  }
+
+  func displayError(errorText: String) {
+    let errorAlert = UIAlertController(title: "Error", message: errorText, preferredStyle: .alert)
+    let dismissAction = UIAlertAction(title: "Dismiss", style: .default)
+    errorAlert.addAction(dismissAction)
+    self.present(errorAlert, animated: true)
+  }
+
   @objc func slideToSignUpCell(_ sender: UIButton) {
     let indexPath = IndexPath(row: 1, section: 0)
 
