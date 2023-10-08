@@ -55,7 +55,7 @@ class RoomsViewController: UIViewController {
     let rooms = databaseRef.child("rooms").observe(.childAdded) { snapshot in
       if let dataArray = snapshot.value as? [String: Any] {
         if let roomName = dataArray["roomName"] as? String {
-          let room = Room(roomName: roomName)
+          let room = Room(roomName: roomName, roomId: snapshot.key)
           self.rooms.append(room)
           self.roomTableView.reloadData()
         }
@@ -80,7 +80,7 @@ extension RoomsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     let chatRoomViewController = storyboard?.instantiateViewController(identifier: "chatRoomViewController") as! ChatRoomViewController
-
+    chatRoomViewController.room = rooms[indexPath.row]
     self.navigationController?.pushViewController(chatRoomViewController, animated: true)
 
   }
