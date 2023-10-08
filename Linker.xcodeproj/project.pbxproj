@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */; };
+		9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39D2AD2DD1500E8E3D8 /* Room.swift */; };
+		9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */; };
 		9F373D8D2AD2062C001C8DB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */; };
 		9F373D902AD207DA001C8DB3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D8F2AD207DA001C8DB3 /* FirebaseAnalytics */; };
 		9F373D922AD207DA001C8DB3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D912AD207DA001C8DB3 /* FirebaseAuth */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		9F30C39D2AD2DD1500E8E3D8 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F492E112ACFEE51009F4E01 /* Linker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F492E142ACFEE51009F4E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F30C39C2AD2DD0100E8E3D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C39D2AD2DD1500E8E3D8 /* Room.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9F492E082ACFEE51009F4E01 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 		9F492E132ACFEE51009F4E01 /* Linker */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C39C2AD2DD0100E8E3D8 /* Models */,
 				9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */,
 				9F492E142ACFEE51009F4E01 /* AppDelegate.swift */,
 				9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */,
@@ -82,6 +95,7 @@
 				9F492E222ACFEE52009F4E01 /* Info.plist */,
 				9F7E61252AD1506D00C339B2 /* FormCell.swift */,
 				9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */,
+				9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */,
 			);
 			path = Linker;
 			sourceTree = "<group>";
@@ -169,8 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */,
 				9F492E192ACFEE51009F4E01 /* ViewController.swift in Sources */,
 				9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */,
+				9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */,
 				9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */,
 				9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */,
 				9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */,
