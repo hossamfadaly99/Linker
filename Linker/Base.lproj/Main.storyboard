@@ -214,8 +214,65 @@
                     <view key="view" contentMode="scaleToFill" id="Brs-Qw-kty">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fh2-yl-Ph6">
+                                <rect key="frame" x="0.0" y="103" width="393" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P10-KR-GIp">
+                                        <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chat room name.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-B5-zNp">
+                                                <rect key="frame" x="16" y="0.0" width="256.66666666666669" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstItem="ACv-B5-zNp" firstAttribute="top" secondItem="P10-KR-GIp" secondAttribute="top" id="8ZA-Ro-b9o"/>
+                                            <constraint firstAttribute="trailing" secondItem="ACv-B5-zNp" secondAttribute="trailing" constant="16" id="NRf-Zs-iiW"/>
+                                            <constraint firstAttribute="bottom" secondItem="ACv-B5-zNp" secondAttribute="bottom" id="Tef-nI-jT1"/>
+                                            <constraint firstItem="ACv-B5-zNp" firstAttribute="leading" secondItem="P10-KR-GIp" secondAttribute="leading" constant="16" id="lVy-rD-ur9"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhV-ey-lTX">
+                                        <rect key="frame" x="288.66666666666669" y="0.0" width="104.33333333333331" height="40"/>
+                                        <color key="backgroundColor" red="0.46274509800000002" green="0.9011595845" blue="0.89059740300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" imagePlacement="trailing" title="Create" imagePadding="4">
+                                            <color key="baseForegroundColor" red="0.18279297572968767" green="0.18409631446824248" blue="0.18800633068390693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mqw-TU-1zB"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EhZ-2D-giT">
+                                <rect key="frame" x="0.0" y="143" width="393" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" rowHeight="73" id="m7v-Ci-4xr">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m7v-Ci-4xr" id="7TN-yp-oA5">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nRR-Po-T9f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EhZ-2D-giT" firstAttribute="leading" secondItem="nRR-Po-T9f" secondAttribute="leading" id="I4S-xr-wTc"/>
+                            <constraint firstItem="Fh2-yl-Ph6" firstAttribute="leading" secondItem="nRR-Po-T9f" secondAttribute="leading" id="V0W-DY-XAh"/>
+                            <constraint firstItem="EhZ-2D-giT" firstAttribute="top" secondItem="Fh2-yl-Ph6" secondAttribute="bottom" id="cZl-L9-8Yg"/>
+                            <constraint firstItem="nRR-Po-T9f" firstAttribute="bottom" secondItem="EhZ-2D-giT" secondAttribute="bottom" id="pao-ho-bXd"/>
+                            <constraint firstItem="Fh2-yl-Ph6" firstAttribute="top" secondItem="nRR-Po-T9f" secondAttribute="top" id="v0W-vl-skD"/>
+                            <constraint firstItem="nRR-Po-T9f" firstAttribute="trailing" secondItem="EhZ-2D-giT" secondAttribute="trailing" id="w9d-pn-o2C"/>
+                            <constraint firstItem="nRR-Po-T9f" firstAttribute="trailing" secondItem="Fh2-yl-Ph6" secondAttribute="trailing" id="x0n-XH-Z63"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat Rooms" id="kwW-v7-ndJ">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="PK2-ax-Nst">
@@ -225,6 +282,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="roomTableView" destination="EhZ-2D-giT" id="3NZ-lN-gGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Siz-ba-fgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,6 +334,7 @@
     <resources>
         <image name="LinkerLogo" width="375" height="375"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="85"/>
+        <image name="plus.circle" catalog="system" width="128" height="123"/>
         <namedColor name="BlueBorder">
             <color red="0.17647058823529413" green="0.54509803921568623" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

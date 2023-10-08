@@ -10,10 +10,12 @@ import Firebase
 
 class RoomsViewController: UIViewController {
 
+  @IBOutlet weak var roomTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      setupTableView()
     }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +24,11 @@ class RoomsViewController: UIViewController {
     if Auth.auth().currentUser == nil {
       presentAuthentication()
     }
+  }
 
+  private func setupTableView() {
+    roomTableView.dataSource = self
+    roomTableView.delegate = self
   }
 
   @IBAction private func didPressLogout(_ sender: UIButton) {
@@ -35,15 +41,26 @@ class RoomsViewController: UIViewController {
     authViewController.modalPresentationStyle = .fullScreen
     present(authViewController, animated: true)
   }
+}
 
-    /*
-    // MARK: - Navigation
+extension RoomsViewController: UITableViewDelegate {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+}
+
+extension RoomsViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    4
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell")!
+    var config = UIListContentConfiguration.cell()
+    config.text = "hossam"
+    cell.contentConfiguration = config
+
+
+    return cell
+  }
+
 
 }

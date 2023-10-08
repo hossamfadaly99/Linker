@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     setupCollecionView()
 
+
     //    passwordTF.borderColor = .red
     //    passwordTF.placeholderColor = .red
   }
