@@ -66,8 +66,10 @@ class RoomsViewController: UIViewController {
   }
 
   @IBAction private func didPressLogout(_ sender: UIButton) {
-    try! Auth.auth().signOut()
-    presentAuthentication()
+    Utilities.displayRedAlert(self, title: "Logout", text: "Are you sure you want to logout?") {
+      try! Auth.auth().signOut()
+      self.presentAuthentication()
+    }
   }
 
   private func presentAuthentication() {

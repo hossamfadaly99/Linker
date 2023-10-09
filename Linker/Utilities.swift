@@ -20,4 +20,15 @@ class Utilities {
     swipeGesture.direction = [.down, .left, .right, .up]
     viewController.view.addGestureRecognizer(swipeGesture)
   }
+
+  static func displayRedAlert(_ viewController: UIViewController, title: String, text: String, completion: @escaping () -> ()) {
+    let redAlert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+    let mainAction = UIAlertAction(title: title, style: .destructive) {_ in
+      completion()
+    }
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    redAlert.addAction(mainAction)
+    redAlert.addAction(cancelAction)
+    viewController.present(redAlert, animated: true)
+  }
 }
