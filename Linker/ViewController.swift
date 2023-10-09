@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
     setupCollecionView()
+    Utilities.handleKeyboardDismissing(self)
 
     //    passwordTF.borderColor = .red
     //    passwordTF.placeholderColor = .red
@@ -84,7 +85,7 @@ extension ViewController: UICollectionViewDataSource {
         let dataArray: [String:Any] = ["username": username]
         user.setValue(dataArray)
       } else {
-        self.displayError(errorText: error!.localizedDescription)
+        Utilities.displayError(errorText: error!.localizedDescription, self)
       }
     }
   }
@@ -99,18 +100,10 @@ extension ViewController: UICollectionViewDataSource {
     Auth.auth().signIn(withEmail: emailAddress, password: password) { result, error in
       if error == nil {
         self.dismiss(animated: true)
-        print(result?.user)
       } else {
-        self.displayError(errorText: error!.localizedDescription)
+        Utilities.displayError(errorText: error!.localizedDescription, self)
       }
     }
-  }
-
-  func displayError(errorText: String) {
-    let errorAlert = UIAlertController(title: "Error", message: errorText, preferredStyle: .alert)
-    let dismissAction = UIAlertAction(title: "Dismiss", style: .default)
-    errorAlert.addAction(dismissAction)
-    self.present(errorAlert, animated: true)
   }
 
   @objc func slideToSignUpCell(_ sender: UIButton) {
