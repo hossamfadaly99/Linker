@@ -19,18 +19,14 @@ class MessageCell: UITableViewCell {
     case outgoing
   }
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setupUI()
+  }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-      setupUI()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+  }
 
   private func setupUI() {
     messageBubble.layer.cornerRadius = 6
@@ -45,10 +41,12 @@ class MessageCell: UITableViewCell {
     if type == .outgoing {
       messageStack.alignment = .trailing
       messageBubble.backgroundColor = UIColor(named: "outgoingMsgColor")
+      messageTextView.textColor = .white
 
     } else if type == .incoming {
       messageStack.alignment = .leading
-      messageBubble.backgroundColor = .lightGray
+      messageBubble.backgroundColor = UIColor(named: "incomingMsgColor")
+      messageTextView.textColor = .black
     }
   }
 }

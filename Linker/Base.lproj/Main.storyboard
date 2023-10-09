@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzd-l0-3Gv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -220,10 +221,10 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P10-KR-GIp">
-                                        <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chat room name.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-B5-zNp">
-                                                <rect key="frame" x="16" y="0.0" width="256.66666666666669" height="40"/>
+                                                <rect key="frame" x="16" y="0.0" width="321" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -237,11 +238,16 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhV-ey-lTX">
-                                        <rect key="frame" x="288.66666666666669" y="0.0" width="104.33333333333331" height="40"/>
-                                        <color key="backgroundColor" red="0.46274509800000002" green="0.9011595845" blue="0.89059740300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" imagePlacement="trailing" title="Create" imagePadding="4">
-                                            <color key="baseForegroundColor" red="0.18279297572968767" green="0.18409631446824248" blue="0.18800633068390693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="353" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="CKL-AH-SDR"/>
+                                        </constraints>
+                                        <color key="tintColor" name="outgoingMsgColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="plus.circle.fill" catalog="system">
+                                            <color key="titleColor" name="outgoingMsgColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="didPressCreateNewRoom:" destination="sd0-W3-g3I" eventType="touchUpInside" id="q2T-Vq-e95"/>
                                         </connections>
@@ -251,7 +257,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Mqw-TU-1zB"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EhZ-2D-giT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EhZ-2D-giT">
                                 <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -355,7 +361,7 @@
                                     <constraint firstAttribute="height" constant="50" id="POu-81-7NQ"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-eW-jTn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-eW-jTn">
                                 <rect key="frame" x="0.0" y="59" width="393" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -481,7 +487,7 @@
         <image name="LinkerLogo" width="375" height="375"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="eye.slash.fill" catalog="system" width="128" height="85"/>
-        <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="BlueBorder">
             <color red="0.17647058823529413" green="0.54509803921568623" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -490,6 +496,9 @@
         </namedColor>
         <namedColor name="grayf6">
             <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="outgoingMsgColor">
+            <color red="0.22352941176470589" green="0.82352941176470584" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

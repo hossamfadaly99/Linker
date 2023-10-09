@@ -18,10 +18,8 @@ class FormCell: UICollectionViewCell {
   private var isPasswordVisable = false
 
   @IBAction func changePasswordVisability(_ sender: UIButton) {
-    print("rlgltrglntrgnj")
     isPasswordVisable.toggle()
     passwordTF.isSecureTextEntry = !isPasswordVisable
-    print(passwordTF.isSecureTextEntry)
   }
 
   @IBAction func changeAuthentication(_ sender: UIButton) {

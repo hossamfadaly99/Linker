@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
     setupCollecionView()
-
+    Utilities.handleKeyboardDismissing(self)
 
     //    passwordTF.borderColor = .red
     //    passwordTF.placeholderColor = .red
@@ -100,7 +100,6 @@ extension ViewController: UICollectionViewDataSource {
     Auth.auth().signIn(withEmail: emailAddress, password: password) { result, error in
       if error == nil {
         self.dismiss(animated: true)
-        print(result?.user)
       } else {
         Utilities.displayError(errorText: error!.localizedDescription, self)
       }

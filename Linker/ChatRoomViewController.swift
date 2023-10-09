@@ -21,6 +21,7 @@ class ChatRoomViewController: UIViewController {
 
     setupTableView()
     observeMessages()
+    Utilities.handleKeyboardDismissing(self)
   }
 
   private func setupTableView() {
@@ -39,6 +40,7 @@ class ChatRoomViewController: UIViewController {
 
         self.chatMessages.append(message)
         self.chatTableView.reloadData()
+        self.chatTableView.scrollToRow(at: IndexPath(row: self.chatMessages.count - 1, section: 0), at: .bottom, animated: false)
       }
     }
   }
@@ -113,9 +115,7 @@ extension ChatRoomViewController: UITableViewDataSource {
     } else {
       cell.setBubbleType(.incoming)
     }
-    
     return cell
   }
-
 
 }

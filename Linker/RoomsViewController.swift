@@ -20,6 +20,7 @@ class RoomsViewController: UIViewController {
 
       setupTableView()
       observeRooms()
+      Utilities.handleKeyboardDismissing(self)
     }
 
   override func viewWillAppear(_ animated: Bool) {

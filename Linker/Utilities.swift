@@ -14,4 +14,10 @@ class Utilities {
     errorAlert.addAction(dismissAction)
     viewController.present(errorAlert, animated: true)
   }
+
+  static func handleKeyboardDismissing(_ viewController: UIViewController) {
+    let swipeGesture = UISwipeGestureRecognizer(target: viewController.view, action: #selector(UIView.endEditing))
+    swipeGesture.direction = [.down, .left, .right, .up]
+    viewController.view.addGestureRecognizer(swipeGesture)
+  }
 }
