@@ -52,7 +52,7 @@ class RoomsViewController: UIViewController {
 
   private func observeRooms() {
     let databaseRef = Database.database().reference()
-    let rooms = databaseRef.child("rooms").observe(.childAdded) { snapshot in
+    databaseRef.child("rooms").observe(.childAdded) { snapshot in
       if let dataArray = snapshot.value as? [String: Any] {
         if let roomName = dataArray["roomName"] as? String {
           let room = Room(roomName: roomName, roomId: snapshot.key)
