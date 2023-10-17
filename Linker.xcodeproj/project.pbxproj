@@ -20,7 +20,7 @@
 		9F373D962AD207DA001C8DB3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D952AD207DA001C8DB3 /* FirebaseStorage */; };
 		9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E142ACFEE51009F4E01 /* AppDelegate.swift */; };
 		9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */; };
-		9F492E192ACFEE51009F4E01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E182ACFEE51009F4E01 /* ViewController.swift */; };
+		9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */; };
 		9F492E1C2ACFEE51009F4E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1A2ACFEE51009F4E01 /* Main.storyboard */; };
 		9F492E1E2ACFEE52009F4E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */; };
 		9F492E212ACFEE52009F4E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1F2ACFEE52009F4E01 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		9F492E112ACFEE51009F4E01 /* Linker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F492E142ACFEE51009F4E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F492E182ACFEE51009F4E01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		9F492E1B2ACFEE51009F4E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F492E202ACFEE52009F4E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */,
 				9F492E142ACFEE51009F4E01 /* AppDelegate.swift */,
 				9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */,
-				9F492E182ACFEE51009F4E01 /* ViewController.swift */,
+				9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */,
 				9F492E1A2ACFEE51009F4E01 /* Main.storyboard */,
 				9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */,
 				9F492E1F2ACFEE52009F4E01 /* LaunchScreen.storyboard */,
@@ -194,7 +194,7 @@
 			files = (
 				9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */,
 				9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */,
-				9F492E192ACFEE51009F4E01 /* ViewController.swift in Sources */,
+				9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */,
 				9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */,
 				9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */,
 				9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */,

@@ -73,7 +73,7 @@ class RoomsViewController: UIViewController {
   }
 
   private func presentAuthentication() {
-    let authViewController = storyboard?.instantiateViewController(identifier: "AuthViewController") as! ViewController
+    let authViewController = storyboard?.instantiateViewController(identifier: "AuthViewController") as! AuthenticationViewController
     authViewController.modalPresentationStyle = .fullScreen
     present(authViewController, animated: true)
   }
