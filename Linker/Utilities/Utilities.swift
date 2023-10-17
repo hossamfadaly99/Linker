@@ -9,8 +9,8 @@ import UIKit
 
 class Utilities {
   static func displayError(withText text: String, _ viewController: UIViewController) {
-    let errorAlert = UIAlertController(title: "Error", message: text, preferredStyle: .alert)
-    let dismissAction = UIAlertAction(title: "Dismiss", style: .default)
+    let errorAlert = UIAlertController(title: Constants.ERROR, message: text, preferredStyle: .alert)
+    let dismissAction = UIAlertAction(title: Constants.DISMISS, style: .default)
     errorAlert.addAction(dismissAction)
     viewController.present(errorAlert, animated: true)
   }
@@ -26,7 +26,7 @@ class Utilities {
     let mainAction = UIAlertAction(title: title, style: .destructive) {_ in
       completion()
     }
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    let cancelAction = UIAlertAction(title: Constants.CANCEL, style: .cancel)
     redAlert.addAction(mainAction)
     redAlert.addAction(cancelAction)
     viewController.present(redAlert, animated: true)

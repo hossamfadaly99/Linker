@@ -34,7 +34,7 @@ extension AuthenticationViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "formCell", for: indexPath) as! FormCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.FORM_CELL, for: indexPath) as! FormCell
     cell.sliderButton.configuration?.imagePadding = 8
 
     if indexPath.row == 0 { // sign in
@@ -53,19 +53,19 @@ extension AuthenticationViewController: UICollectionViewDataSource {
   private func configureCellUI(_ cell: FormCell, authType: AuthenticationType) {
     if authType == .signIn {
       cell.usernameTF.isHidden = true
-      cell.actionButton.setTitle("Sign In", for: .normal)
-      cell.sliderButton.setTitle("Sign Up", for: .normal)
+      cell.actionButton.setTitle(Constants.SIGN_IN, for: .normal)
+      cell.sliderButton.setTitle(Constants.SIGN_UP, for: .normal)
       cell.sliderButton.configuration?.imagePlacement = .trailing
-      cell.sliderButton.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+      cell.sliderButton.setImage(UIImage(systemName: Constants.CHEVRON_RIGHT), for: .normal)
 
       cell.sliderButton.addTarget(self, action: #selector(slideToSignUpCell(_:)), for: .touchUpInside)
       cell.actionButton.addTarget(self, action: #selector(didPressSignIn(_:)), for: .touchUpInside)
     } else {
       cell.usernameTF.isHidden = false
-      cell.actionButton.setTitle("Sign Up", for: .normal)
-      cell.sliderButton.setTitle("Sign In", for: .normal)
+      cell.actionButton.setTitle(Constants.SIGN_UP, for: .normal)
+      cell.sliderButton.setTitle(Constants.SIGN_IN, for: .normal)
       cell.sliderButton.configuration?.imagePlacement = .leading
-      cell.sliderButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+      cell.sliderButton.setImage(UIImage(systemName: Constants.CHEVRON_LEFT), for: .normal)
 
       cell.sliderButton.addTarget(self, action: #selector(slideToSignInCell(_:)), for: .touchUpInside)
       cell.actionButton.addTarget(self, action: #selector(didPressSignUp(_:)), for: .touchUpInside)

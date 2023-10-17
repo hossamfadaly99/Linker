@@ -15,8 +15,8 @@ class AuthenticationPresenter {
       if error == nil {
         guard let userId = result?.user.uid else { return }
         let reference = Database.database().reference()
-        let user = reference.child("users").child(userId)
-        let dataArray: [String:Any] = ["username": username]
+        let user = reference.child(Constants.USERS).child(userId)
+        let dataArray: [String:Any] = [Constants.USERNAME: username]
         user.setValue(dataArray) { error, _ in
           if error != nil {
             compeletion(error)
@@ -43,7 +43,7 @@ class AuthenticationPresenter {
   }
 
   func getSignInError(error: NSError) -> SignInError {
-    if error.code == 17020 {
+    if error.code == Constants.NO_CONNECTION_FIREBASE_CODE {
       return .networkConnectionError
     } else {
       return .invalidCredential
@@ -57,9 +57,9 @@ class AuthenticationPresenter {
     var localizedDescription: String {
       switch self {
       case .networkConnectionError:
-        return "No Internet Connection!"
+        return Constants.NO_Internet_CONNECTION
       case .invalidCredential:
-        return "E-mail or password is invalid!"
+        return Constants.INVALID_CREDINTIALS
       }
     }
   }
