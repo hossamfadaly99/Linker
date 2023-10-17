@@ -22,8 +22,4 @@ class FormCell: UICollectionViewCell {
     passwordTF.isSecureTextEntry = !isPasswordVisable
   }
 
-  @IBAction func changeAuthentication(_ sender: UIButton) {
-    
-  }
-
 }
