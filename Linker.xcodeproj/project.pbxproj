@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */; };
+		9F2EEB4D2ADF208F00ACE8C6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB4C2ADF208F00ACE8C6 /* Validation.swift */; };
 		9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */; };
 		9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39D2AD2DD1500E8E3D8 /* Room.swift */; };
 		9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenter.swift; sourceTree = "<group>"; };
+		9F2EEB4C2ADF208F00ACE8C6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		9F30C39D2AD2DD1500E8E3D8 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F2EEB452ADE9C6200ACE8C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB462ADE9C7100ACE8C6 /* Authentication */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9F2EEB462ADE9C7100ACE8C6 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB482ADE9CA700ACE8C6 /* Presenter */,
+				9F2EEB472ADE9CA000ACE8C6 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		9F2EEB472ADE9CA000ACE8C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F2EEB482ADE9CA700ACE8C6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F2EEB4B2ADF208200ACE8C6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB4C2ADF208F00ACE8C6 /* Validation.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9F30C39C2AD2DD0100E8E3D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +135,8 @@
 		9F492E132ACFEE51009F4E01 /* Linker */ = {
 			isa = PBXGroup;
 			children = (
+				9F2EEB4B2ADF208200ACE8C6 /* Utilities */,
+				9F2EEB452ADE9C6200ACE8C6 /* Modules */,
 				9F30C39C2AD2DD0100E8E3D8 /* Models */,
 				9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */,
 				9F492E142ACFEE51009F4E01 /* AppDelegate.swift */,
@@ -196,11 +242,13 @@
 				9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */,
 				9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */,
 				9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */,
+				9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */,
 				9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */,
 				9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */,
 				9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */,
 				9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */,
 				9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */,
+				9F2EEB4D2ADF208F00ACE8C6 /* Validation.swift in Sources */,
 				9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
