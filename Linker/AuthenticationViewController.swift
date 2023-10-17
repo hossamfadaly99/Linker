@@ -7,7 +7,6 @@
 
 import UIKit
 import TextFieldEffects
-//import Firebase
 
 class AuthenticationViewController: UIViewController {
 
@@ -78,34 +77,45 @@ extension AuthenticationViewController: UICollectionViewDataSource {
     let indexPath = IndexPath(row: 1, section: 0)
     let cell = self.collectionView.cellForItem(at: indexPath) as! FormCell
 
-    //TODO: validate username, email & password
     guard let emailAddress = cell.emailTF.text,
+          let username = cell.usernameTF.text,
           let password = cell.passwordTF.text
     else { return }
 
-    presenter.SignUp(withUsername: cell.usernameTF.text!, email: cell.emailTF.text!, password: cell.passwordTF.text!) {  error in
-      if let error = error {
-        Utilities.displayError(errorText: error.localizedDescription, self)
-        return
+    let validationResult =  Validator.validateSignUpFields(email: emailAddress, username: username, password: password)
+    switch validationResult {
+    case .valid:
+      presenter.SignUp(withUsername: username, email: emailAddress, password: password) {  error in
+        if let error = error {
+          Utilities.displayError(withText: error.localizedDescription, self)
+          return
+        }
+        self.dismiss(animated: true)
       }
-      self.dismiss(animated: true)
+    default:
+      Utilities.displayError(withText: validationResult.error, self)
     }
   }
 
   @objc func didPressSignIn(_ sender: UIButton) {
     let indexPath = IndexPath(row: 0, section: 0)
     let cell = self.collectionView.cellForItem(at: indexPath) as! FormCell
-    //TODO: validate username, email & password
+
     guard let emailAddress = cell.emailTF.text,
           let password = cell.passwordTF.text
     else { return }
 
-    presenter.signIn(withEmail: emailAddress, password: password) { error in
-      if error == nil {
-        self.dismiss(animated: true)
-      } else {
-        Utilities.displayError(errorText: error!.localizedDescription, self)
+    let validationResult =  Validator.validateSignInFields(email: emailAddress, password: password)
+    if validationResult == .valid {
+      presenter.signIn(withEmail: emailAddress, password: password) { error in
+        if error == nil {
+          self.dismiss(animated: true)
+        } else {
+          Utilities.displayError(withText: error!.localizedDescription, self)
+        }
       }
+    } else {
+      Utilities.displayError(withText: validationResult.error, self)
     }
   }
 

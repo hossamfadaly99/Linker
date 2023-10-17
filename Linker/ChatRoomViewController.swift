@@ -92,7 +92,7 @@ class ChatRoomViewController: UIViewController {
       if isSuccess {
         self.chatTF.text = ""
       } else {
-        Utilities.displayError(errorText: "Message was not sent!", self)
+        Utilities.displayError(withText: "Message was not sent!", self)
       }
     }
   }

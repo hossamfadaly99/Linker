@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */; };
-		9F2EEB4D2ADF208F00ACE8C6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB4C2ADF208F00ACE8C6 /* Validation.swift */; };
+		9F2EEB4D2ADF208F00ACE8C6 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB4C2ADF208F00ACE8C6 /* Validator.swift */; };
 		9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */; };
 		9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39D2AD2DD1500E8E3D8 /* Room.swift */; };
 		9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */; };
@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenter.swift; sourceTree = "<group>"; };
-		9F2EEB4C2ADF208F00ACE8C6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		9F2EEB4C2ADF208F00ACE8C6 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		9F30C39D2AD2DD1500E8E3D8 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		9F2EEB4B2ADF208200ACE8C6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				9F2EEB4C2ADF208F00ACE8C6 /* Validation.swift */,
+				9F2EEB4C2ADF208F00ACE8C6 /* Validator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 				9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */,
 				9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */,
 				9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */,
-				9F2EEB4D2ADF208F00ACE8C6 /* Validation.swift in Sources */,
+				9F2EEB4D2ADF208F00ACE8C6 /* Validator.swift in Sources */,
 				9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
