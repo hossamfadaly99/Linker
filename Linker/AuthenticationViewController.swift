@@ -7,23 +7,19 @@
 
 import UIKit
 import TextFieldEffects
-import Firebase
+//import Firebase
 
 class AuthenticationViewController: UIViewController {
 
-  
   @IBOutlet weak var collectionView: UICollectionView!
-
-  private var isPasswordVisable = false
+  private var presenter: AuthenticationPresenter!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setupCollecionView()
     Utilities.handleKeyboardDismissing(self)
-
-    //    passwordTF.borderColor = .red
-    //    passwordTF.placeholderColor = .red
+    presenter = AuthenticationPresenter()
   }
 
   private func setupCollecionView() {
@@ -40,7 +36,6 @@ extension AuthenticationViewController: UICollectionViewDataSource {
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "formCell", for: indexPath) as! FormCell
-
     cell.sliderButton.configuration?.imagePadding = 8
 
     if indexPath.row == 0 { // sign in
@@ -51,12 +46,12 @@ extension AuthenticationViewController: UICollectionViewDataSource {
     return cell
   }
 
-  enum Authentication {
+  enum AuthenticationType {
     case signIn
     case signUp
   }
 
-  private func configureCellUI(_ cell: FormCell, authType: Authentication) {
+  private func configureCellUI(_ cell: FormCell, authType: AuthenticationType) {
     if authType == .signIn {
       cell.usernameTF.isHidden = true
       cell.actionButton.setTitle("Sign In", for: .normal)
@@ -88,18 +83,12 @@ extension AuthenticationViewController: UICollectionViewDataSource {
           let password = cell.passwordTF.text
     else { return }
 
-    //TODO: creaate user in firebase
-    Auth.auth().createUser(withEmail: emailAddress, password: password) { result, error in
-      if error == nil {
-        guard let userId = result?.user.uid, let username = cell.usernameTF.text else { return }
-        self.dismiss(animated: true)
-        let reference = Database.database().reference()
-        let user = reference.child("users").child(userId)
-        let dataArray: [String:Any] = ["username": username]
-        user.setValue(dataArray)
-      } else {
-        Utilities.displayError(errorText: error!.localizedDescription, self)
+    presenter.SignUp(withUsername: cell.usernameTF.text!, email: cell.emailTF.text!, password: cell.passwordTF.text!) {  error in
+      if let error = error {
+        Utilities.displayError(errorText: error.localizedDescription, self)
+        return
       }
+      self.dismiss(animated: true)
     }
   }
 
@@ -111,8 +100,7 @@ extension AuthenticationViewController: UICollectionViewDataSource {
           let password = cell.passwordTF.text
     else { return }
 
-    //TODO: creaate user in firebase
-    Auth.auth().signIn(withEmail: emailAddress, password: password) { result, error in
+    presenter.signIn(withEmail: emailAddress, password: password) { error in
       if error == nil {
         self.dismiss(animated: true)
       } else {
@@ -123,13 +111,11 @@ extension AuthenticationViewController: UICollectionViewDataSource {
 
   @objc func slideToSignUpCell(_ sender: UIButton) {
     let indexPath = IndexPath(row: 1, section: 0)
-
     collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
   }
 
   @objc func slideToSignInCell(_ sender: UIButton) {
     let indexPath = IndexPath(row: 0, section: 0)
-
     collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
   }
 }
