@@ -8,8 +8,8 @@
 import UIKit
 
 class Utilities {
-  static func displayError(errorText: String, _ viewController: UIViewController) {
-    let errorAlert = UIAlertController(title: "Error", message: errorText, preferredStyle: .alert)
+  static func displayError(withText text: String, _ viewController: UIViewController) {
+    let errorAlert = UIAlertController(title: "Error", message: text, preferredStyle: .alert)
     let dismissAction = UIAlertAction(title: "Dismiss", style: .default)
     errorAlert.addAction(dismissAction)
     viewController.present(errorAlert, animated: true)
