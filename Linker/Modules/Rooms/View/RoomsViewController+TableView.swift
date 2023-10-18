@@ -10,8 +10,11 @@ import UIKit
 extension RoomsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    let chatRoomViewController = storyboard?.instantiateViewController(identifier: Constants.CHAT_ROOM_VIEW_CONTROLLER) as! ChatRoomViewController
-    chatRoomViewController.room = presenter.rooms[indexPath.row]
+    let chatRoomViewController = storyboard?.instantiateViewController(identifier: Constants.CHAT_ROOM_VIEW_CONTROLLER) as! RoomChatViewController
+
+    let room = presenter.rooms[indexPath.row]
+    let chatPresenter = ChatPresenter(with: room)
+    chatRoomViewController.presenter = chatPresenter
     self.navigationController?.pushViewController(chatRoomViewController, animated: true)
   }
 }

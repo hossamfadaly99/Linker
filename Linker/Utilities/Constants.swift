@@ -29,6 +29,14 @@ enum Constants {
   static let AUTHENTICAION_VIEW_CONTROLLER = "AuthViewController"
   static let CHAT_ROOM_VIEW_CONTROLLER = "chatRoomViewController"
   static let ROOM_CELL = "roomCell"
+  static let MESSAGES = "messages"
+  static let SENDER_NAME = "senderName"
+  static let SENDER_ID = "senderId"
+  static let TEXT = "text"
+  static let MESSAGE_CELL = "messageCell"
+  static let OUTGOING_MSG_COLOR = "outgoingMsgColor"
+  static let INCOMING_MSG_COLOR = "incomingMsgColor"
+  static let MSG_NOT_SENT = "Message was not sent!"
 }
 
 typealias VoidBlock = () -> Void
