@@ -21,4 +21,9 @@ enum Constants {
   static let ERROR = "Error"
   static let DISMISS = "Dismiss"
   static let CANCEL = "Cancel"
+  static let ROOMS = "rooms"
+  static let ROOM_NAME = "roomName"
+//  static let CANCEL = "Cancel"
 }
+
+typealias VoidBlock = () -> Void

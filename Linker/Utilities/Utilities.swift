@@ -21,7 +21,7 @@ class Utilities {
     viewController.view.addGestureRecognizer(swipeGesture)
   }
 
-  static func displayRedAlert(_ viewController: UIViewController, title: String, text: String, completion: @escaping () -> ()) {
+  static func displayRedAlert(_ viewController: UIViewController, title: String, text: String, completion: @escaping VoidBlock) {
     let redAlert = UIAlertController(title: title, message: text, preferredStyle: .alert)
     let mainAction = UIAlertAction(title: title, style: .destructive) {_ in
       completion()

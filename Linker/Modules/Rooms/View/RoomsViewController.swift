@@ -6,28 +6,31 @@
 //
 
 import UIKit
-import Firebase
 
 class RoomsViewController: UIViewController {
 
   @IBOutlet weak var roomTableView: UITableView!
   @IBOutlet weak var newRoomNameTF: UITextField!
 
-  var rooms: [Room] = []
+  private var presenter: RoomsPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      presenter = RoomsPresenter()
+
       setupTableView()
-      observeRooms()
+      presenter.observeRooms {
+        self.roomTableView.reloadData()
+      }
       Utilities.handleKeyboardDismissing(self)
     }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
-    if Auth.auth().currentUser == nil {
-      presentAuthentication()
+    
+    if !presenter.isThereCurentUser() {
+      presentAuthenticationView()
     }
   }
 
@@ -40,39 +43,20 @@ class RoomsViewController: UIViewController {
     guard let roomName = newRoomNameTF.text, roomName.isEmpty == false else {
       return
     }
-    let databaseReference = Database.database().reference()
-    let room = databaseReference.child("rooms").childByAutoId()
-
-    let dataArry: [String: Any] = ["roomName": roomName]
-    room.setValue(dataArry) { error, reference in
-      if error == nil {
-        self.newRoomNameTF.text = ""
-      }
-    }
-  }
-
-  private func observeRooms() {
-    let databaseRef = Database.database().reference()
-    databaseRef.child("rooms").observe(.childAdded) { snapshot in
-      if let dataArray = snapshot.value as? [String: Any] {
-        if let roomName = dataArray["roomName"] as? String {
-          let room = Room(roomName: roomName, roomId: snapshot.key)
-          self.rooms.append(room)
-          self.roomTableView.reloadData()
-        }
-      }
-
+    presenter.createNewRoom(withName: roomName) {
+      self.newRoomNameTF.text = ""
     }
   }
 
   @IBAction private func didPressLogout(_ sender: UIButton) {
     Utilities.displayRedAlert(self, title: "Logout", text: "Are you sure you want to logout?") {
-      try! Auth.auth().signOut()
-      self.presentAuthentication()
+      self.presenter.signOut {
+        self.presentAuthenticationView()
+      }
     }
   }
 
-  private func presentAuthentication() {
+  private func presentAuthenticationView() {
     let authViewController = storyboard?.instantiateViewController(identifier: "AuthViewController") as! AuthenticationViewController
     authViewController.modalPresentationStyle = .fullScreen
     present(authViewController, animated: true)
@@ -83,23 +67,21 @@ extension RoomsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     let chatRoomViewController = storyboard?.instantiateViewController(identifier: "chatRoomViewController") as! ChatRoomViewController
-    chatRoomViewController.room = rooms[indexPath.row]
+    chatRoomViewController.room = presenter.rooms[indexPath.row]
     self.navigationController?.pushViewController(chatRoomViewController, animated: true)
-
   }
 }
 
 extension RoomsViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    rooms.count
+    presenter.rooms.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell")!
     var config = UIListContentConfiguration.cell()
-    config.text = rooms[indexPath.row].roomName
+    config.text = presenter.rooms[indexPath.row].roomName
     cell.contentConfiguration = config
-
 
     return cell
   }
