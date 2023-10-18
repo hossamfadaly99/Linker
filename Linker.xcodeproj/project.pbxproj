@@ -12,6 +12,7 @@
 		9F2EEB4F2ADF2AFC00ACE8C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB4E2ADF2AFC00ACE8C6 /* Constants.swift */; };
 		9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB532ADFFA7700ACE8C6 /* RoomsPresenter.swift */; };
 		9F2EEB562AE0138200ACE8C6 /* RoomsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB552AE0138200ACE8C6 /* RoomsViewController+TableView.swift */; };
+		9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB572AE03C8E00ACE8C6 /* Authentication+CollectionView.swift */; };
 		9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */; };
 		9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39D2AD2DD1500E8E3D8 /* Room.swift */; };
 		9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */; };
@@ -39,6 +40,7 @@
 		9F2EEB4E2ADF2AFC00ACE8C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F2EEB532ADFFA7700ACE8C6 /* RoomsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPresenter.swift; sourceTree = "<group>"; };
 		9F2EEB552AE0138200ACE8C6 /* RoomsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomsViewController+TableView.swift"; sourceTree = "<group>"; };
+		9F2EEB572AE03C8E00ACE8C6 /* Authentication+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authentication+CollectionView.swift"; sourceTree = "<group>"; };
 		9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		9F30C39D2AD2DD1500E8E3D8 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		9F30C39F2AD2E35D00E8E3D8 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */,
 				9F7E61252AD1506D00C339B2 /* FormCell.swift */,
+				9F2EEB572AE03C8E00ACE8C6 /* Authentication+CollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */,
 				9F30C3A02AD2E35D00E8E3D8 /* ChatRoomViewController.swift in Sources */,
 				9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */,
 				9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */,
