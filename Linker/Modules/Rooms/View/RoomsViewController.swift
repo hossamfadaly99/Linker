@@ -12,7 +12,7 @@ class RoomsViewController: UIViewController {
   @IBOutlet weak var roomTableView: UITableView!
   @IBOutlet weak var newRoomNameTF: UITextField!
 
-  private var presenter: RoomsPresenter!
+  var presenter: RoomsPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +44,12 @@ class RoomsViewController: UIViewController {
       return
     }
     presenter.createNewRoom(withName: roomName) {
-      self.newRoomNameTF.text = ""
+      self.newRoomNameTF.text = Constants.EMPTY_STRING
     }
   }
 
   @IBAction private func didPressLogout(_ sender: UIButton) {
-    Utilities.displayRedAlert(self, title: "Logout", text: "Are you sure you want to logout?") {
+    Utilities.displayRedAlert(self, title: Constants.LOGOUT, text: Constants.LOGOUT_WARNING) {
       self.presenter.signOut {
         self.presentAuthenticationView()
       }
@@ -57,34 +57,9 @@ class RoomsViewController: UIViewController {
   }
 
   private func presentAuthenticationView() {
-    let authViewController = storyboard?.instantiateViewController(identifier: "AuthViewController") as! AuthenticationViewController
+    let authViewController = storyboard?.instantiateViewController(identifier: Constants.AUTHENTICAION_VIEW_CONTROLLER) as! AuthenticationViewController
     authViewController.modalPresentationStyle = .fullScreen
     present(authViewController, animated: true)
   }
 }
 
-extension RoomsViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
-    let chatRoomViewController = storyboard?.instantiateViewController(identifier: "chatRoomViewController") as! ChatRoomViewController
-    chatRoomViewController.room = presenter.rooms[indexPath.row]
-    self.navigationController?.pushViewController(chatRoomViewController, animated: true)
-  }
-}
-
-extension RoomsViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    presenter.rooms.count
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell")!
-    var config = UIListContentConfiguration.cell()
-    config.text = presenter.rooms[indexPath.row].roomName
-    cell.contentConfiguration = config
-
-    return cell
-  }
-
-
-}
