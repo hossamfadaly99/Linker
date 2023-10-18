@@ -40,12 +40,12 @@ class MessageCell: UITableViewCell {
   func setBubbleType(_ type: bubbleType) {
     if type == .outgoing {
       messageStack.alignment = .trailing
-      messageBubble.backgroundColor = UIColor(named: "outgoingMsgColor")
+      messageBubble.backgroundColor = UIColor(named: Constants.OUTGOING_MSG_COLOR)
       messageTextView.textColor = .white
 
     } else if type == .incoming {
       messageStack.alignment = .leading
-      messageBubble.backgroundColor = UIColor(named: "incomingMsgColor")
+      messageBubble.backgroundColor = UIColor(named: Constants.INCOMING_MSG_COLOR)
       messageTextView.textColor = .black
     }
   }
