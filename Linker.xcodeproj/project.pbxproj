@@ -34,6 +34,12 @@
 		9F492E212ACFEE52009F4E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1F2ACFEE52009F4E01 /* LaunchScreen.storyboard */; };
 		9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9F492E292ACFFA90009F4E01 /* TextFieldEffects */; settings = {ATTRIBUTES = (Required, ); }; };
 		9F5F03A62AE2A9500090EA44 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 9F5F03A52AE2A9500090EA44 /* Swinject */; };
+		9F5F03AB2AE2AB690090EA44 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03AA2AE2AB690090EA44 /* Networkable.swift */; };
+		9F5F03AD2AE2AB780090EA44 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */; };
+		9F5F03AF2AE2AC2C0090EA44 /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */; };
+		9F5F03B12AE2AD4C0090EA44 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */; };
+		9F5F03B32AE2B9D50090EA44 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B22AE2B9D50090EA44 /* Repository.swift */; };
+		9F5F03B52AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */; };
 		9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E61252AD1506D00C339B2 /* FormCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,12 @@
 		9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F492E202ACFEE52009F4E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F492E222ACFEE52009F4E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F5F03AA2AE2AB690090EA44 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
+		9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		9F5F03B22AE2B9D50090EA44 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenterProtocol.swift; sourceTree = "<group>"; };
 		9F7E61252AD1506D00C339B2 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */,
+				9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -209,6 +222,7 @@
 		9F492E132ACFEE51009F4E01 /* Linker */ = {
 			isa = PBXGroup;
 			children = (
+				9F5F03A72AE2AB270090EA44 /* Services */,
 				9F2EEB4B2ADF208200ACE8C6 /* Utilities */,
 				9F2EEB452ADE9C6200ACE8C6 /* Modules */,
 				9F30C39C2AD2DD0100E8E3D8 /* Models */,
@@ -221,6 +235,34 @@
 				9F492E222ACFEE52009F4E01 /* Info.plist */,
 			);
 			path = Linker;
+			sourceTree = "<group>";
+		};
+		9F5F03A72AE2AB270090EA44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F03A92AE2AB4C0090EA44 /* Repository */,
+				9F5F03A82AE2AB370090EA44 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F5F03A82AE2AB370090EA44 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F03AA2AE2AB690090EA44 /* Networkable.swift */,
+				9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */,
+				9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F5F03A92AE2AB4C0090EA44 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */,
+				9F5F03B22AE2B9D50090EA44 /* Repository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,15 +354,21 @@
 				9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */,
 				9F30C3A02AD2E35D00E8E3D8 /* RoomChatViewController.swift in Sources */,
 				9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */,
+				9F5F03AB2AE2AB690090EA44 /* Networkable.swift in Sources */,
+				9F5F03B12AE2AD4C0090EA44 /* RepositoryProtocol.swift in Sources */,
 				9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */,
 				9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */,
 				9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */,
 				9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */,
 				9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */,
 				9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */,
+				9F5F03AF2AE2AC2C0090EA44 /* NetworkEnums.swift in Sources */,
 				9F2EEB562AE0138200ACE8C6 /* RoomsViewController+TableView.swift in Sources */,
+				9F5F03AD2AE2AB780090EA44 /* NetworkManager.swift in Sources */,
+				9F5F03B32AE2B9D50090EA44 /* Repository.swift in Sources */,
 				9F2EEB4F2ADF2AFC00ACE8C6 /* Constants.swift in Sources */,
 				9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */,
+				9F5F03B52AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift in Sources */,
 				9F2EEB5F2AE04F5100ACE8C6 /* RoomChatViewController+TableView.swift in Sources */,
 				9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */,
 				9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */,

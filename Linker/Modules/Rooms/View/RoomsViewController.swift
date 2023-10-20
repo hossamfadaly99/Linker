@@ -12,12 +12,12 @@ class RoomsViewController: UIViewController {
   @IBOutlet weak var roomTableView: UITableView!
   @IBOutlet weak var newRoomNameTF: UITextField!
 
-  var presenter: RoomsPresenter!
+  var presenter: RoomsPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      presenter = RoomsPresenter()
+      presenter = RoomsPresenter(repository: Repository(networkManager: NetworkManager()))
 
       setupTableView()
       presenter.observeRooms {
