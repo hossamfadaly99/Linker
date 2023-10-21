@@ -6,15 +6,6 @@
 //
 
 import Foundation
-import Firebase
-
-protocol RoomsPresenterProtocol {
-  var rooms: [Room] { get }
-  func createNewRoom(withName roomName: String, completion: @escaping VoidBlock)
-  func observeRooms(completion: @escaping VoidBlock)
-  func signOut (completion: @escaping VoidBlock)
-  func isThereCurentUser() -> Bool
-}
 
 class RoomsPresenter: RoomsPresenterProtocol {
   var rooms: [Room] = []
@@ -44,6 +35,6 @@ class RoomsPresenter: RoomsPresenterProtocol {
   }
 
   func isThereCurentUser() -> Bool {
-    return Auth.auth().currentUser != nil
+    repository.isThereCurentUser()
   }
 }

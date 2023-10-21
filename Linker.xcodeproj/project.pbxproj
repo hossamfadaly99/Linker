@@ -40,6 +40,14 @@
 		9F5F03B12AE2AD4C0090EA44 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */; };
 		9F5F03B32AE2B9D50090EA44 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B22AE2B9D50090EA44 /* Repository.swift */; };
 		9F5F03B52AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */; };
+		9F5F03B72AE3452B0090EA44 /* ChatPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B62AE3452B0090EA44 /* ChatPresenterProtocol.swift */; };
+		9F5F03B92AE34D6A0090EA44 /* RoomPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B82AE34D6A0090EA44 /* RoomPresenterProtocol.swift */; };
+		9F5F03BB2AE34E1E0090EA44 /* NetworkManager+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03BA2AE34E1E0090EA44 /* NetworkManager+Authentication.swift */; };
+		9F5F03BD2AE34E670090EA44 /* NetworkManager+Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03BC2AE34E670090EA44 /* NetworkManager+Rooms.swift */; };
+		9F5F03BF2AE34E740090EA44 /* NetworkManager+RoomChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03BE2AE34E740090EA44 /* NetworkManager+RoomChat.swift */; };
+		9F5F03C12AE350C20090EA44 /* Repository+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C02AE350C20090EA44 /* Repository+Authentication.swift */; };
+		9F5F03C32AE350DC0090EA44 /* Repository+Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */; };
+		9F5F03C52AE350E90090EA44 /* Repository+RoomChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */; };
 		9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E61252AD1506D00C339B2 /* FormCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +81,14 @@
 		9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		9F5F03B22AE2B9D50090EA44 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenterProtocol.swift; sourceTree = "<group>"; };
+		9F5F03B62AE3452B0090EA44 /* ChatPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenterProtocol.swift; sourceTree = "<group>"; };
+		9F5F03B82AE34D6A0090EA44 /* RoomPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPresenterProtocol.swift; sourceTree = "<group>"; };
+		9F5F03BA2AE34E1E0090EA44 /* NetworkManager+Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Authentication.swift"; sourceTree = "<group>"; };
+		9F5F03BC2AE34E670090EA44 /* NetworkManager+Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Rooms.swift"; sourceTree = "<group>"; };
+		9F5F03BE2AE34E740090EA44 /* NetworkManager+RoomChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+RoomChat.swift"; sourceTree = "<group>"; };
+		9F5F03C02AE350C20090EA44 /* Repository+Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Authentication.swift"; sourceTree = "<group>"; };
+		9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Rooms.swift"; sourceTree = "<group>"; };
+		9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+RoomChat.swift"; sourceTree = "<group>"; };
 		9F7E61252AD1506D00C339B2 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +112,7 @@
 		9F2EEB452ADE9C6200ACE8C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9F2EEB592AE03DFB00ACE8C6 /* Chat */,
+				9F2EEB592AE03DFB00ACE8C6 /* RoomChat */,
 				9F2EEB502ADFF9E700ACE8C6 /* Rooms */,
 				9F2EEB462ADE9C7100ACE8C6 /* Authentication */,
 			);
@@ -163,17 +179,18 @@
 			isa = PBXGroup;
 			children = (
 				9F2EEB532ADFFA7700ACE8C6 /* RoomsPresenter.swift */,
+				9F5F03B82AE34D6A0090EA44 /* RoomPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		9F2EEB592AE03DFB00ACE8C6 /* Chat */ = {
+		9F2EEB592AE03DFB00ACE8C6 /* RoomChat */ = {
 			isa = PBXGroup;
 			children = (
 				9F2EEB5B2AE03E0600ACE8C6 /* Presenter */,
 				9F2EEB5A2AE03E0100ACE8C6 /* View */,
 			);
-			path = Chat;
+			path = RoomChat;
 			sourceTree = "<group>";
 		};
 		9F2EEB5A2AE03E0100ACE8C6 /* View */ = {
@@ -190,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2EEB5C2AE03E4900ACE8C6 /* ChatPresenter.swift */,
+				9F5F03B62AE3452B0090EA44 /* ChatPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -252,6 +270,9 @@
 				9F5F03AA2AE2AB690090EA44 /* Networkable.swift */,
 				9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */,
 				9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */,
+				9F5F03BA2AE34E1E0090EA44 /* NetworkManager+Authentication.swift */,
+				9F5F03BC2AE34E670090EA44 /* NetworkManager+Rooms.swift */,
+				9F5F03BE2AE34E740090EA44 /* NetworkManager+RoomChat.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -261,6 +282,9 @@
 			children = (
 				9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */,
 				9F5F03B22AE2B9D50090EA44 /* Repository.swift */,
+				9F5F03C02AE350C20090EA44 /* Repository+Authentication.swift */,
+				9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */,
+				9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -350,13 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5F03C32AE350DC0090EA44 /* Repository+Rooms.swift in Sources */,
 				9F2EEB5D2AE03E4900ACE8C6 /* ChatPresenter.swift in Sources */,
 				9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */,
 				9F30C3A02AD2E35D00E8E3D8 /* RoomChatViewController.swift in Sources */,
 				9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */,
 				9F5F03AB2AE2AB690090EA44 /* Networkable.swift in Sources */,
+				9F5F03B92AE34D6A0090EA44 /* RoomPresenterProtocol.swift in Sources */,
 				9F5F03B12AE2AD4C0090EA44 /* RepositoryProtocol.swift in Sources */,
 				9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */,
+				9F5F03B72AE3452B0090EA44 /* ChatPresenterProtocol.swift in Sources */,
 				9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */,
 				9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */,
 				9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */,
@@ -373,7 +400,12 @@
 				9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */,
 				9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */,
 				9F2EEB4D2ADF208F00ACE8C6 /* Validator.swift in Sources */,
+				9F5F03BD2AE34E670090EA44 /* NetworkManager+Rooms.swift in Sources */,
+				9F5F03BB2AE34E1E0090EA44 /* NetworkManager+Authentication.swift in Sources */,
+				9F5F03C52AE350E90090EA44 /* Repository+RoomChat.swift in Sources */,
 				9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */,
+				9F5F03BF2AE34E740090EA44 /* NetworkManager+RoomChat.swift in Sources */,
+				9F5F03C12AE350C20090EA44 /* Repository+Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

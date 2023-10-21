@@ -22,6 +22,7 @@ enum Constants {
   static let DISMISS = "Dismiss"
   static let CANCEL = "Cancel"
   static let ROOMS = "rooms"
+  static let ROOM_ID = "roomId"
   static let ROOM_NAME = "roomName"
   static let LOGOUT_WARNING = "Are you sure you want to logout?"
   static let LOGOUT = "Logout"

@@ -15,4 +15,8 @@ protocol RepositoryProtocol {
   func observeRooms(completion: @escaping (Room) -> Void)
   func signOut (completion: @escaping VoidBlock)
   func isThereCurentUser() -> Bool
+
+  func observeMessages(roomId: String, compeletion: @escaping (Message) -> Void)
+  func sendMessage(roomId: String, text: String, completion: @escaping (_ isSuccess: Bool) -> Void)
+  func getCurrentUserId() -> String?
 }
