@@ -13,7 +13,7 @@ extension RoomsViewController: UITableViewDelegate {
     let chatRoomViewController = storyboard?.instantiateViewController(identifier: Constants.CHAT_ROOM_VIEW_CONTROLLER) as! RoomChatViewController
 
     let room = presenter.rooms[indexPath.row]
-    let chatPresenter = ChatPresenter(with: room)
+    let chatPresenter = ChatPresenter(with: room, repository: Repository(networkManager: NetworkManager()))
     chatRoomViewController.presenter = chatPresenter
     self.navigationController?.pushViewController(chatRoomViewController, animated: true)
   }

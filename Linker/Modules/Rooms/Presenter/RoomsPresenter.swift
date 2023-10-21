@@ -6,45 +6,35 @@
 //
 
 import Foundation
-import Firebase
 
-class RoomsPresenter {
+class RoomsPresenter: RoomsPresenterProtocol {
   var rooms: [Room] = []
 
-  func createNewRoom(withName roomName: String, completion: @escaping VoidBlock) {
-    let databaseReference = Database.database().reference()
-    let room = databaseReference.child(Constants.ROOMS).childByAutoId()
+  let repository: RepositoryProtocol
 
-    let dataArry: [String: Any] = [Constants.ROOM_NAME: roomName]
-    room.setValue(dataArry) { error, reference in
-      if error == nil {
-        completion()
-      }
-    }
+  init(repository: RepositoryProtocol) {
+    self.repository = repository
+  }
+
+  func createNewRoom(withName roomName: String, completion: @escaping VoidBlock) {
+    repository.createNewRoom(withName: roomName, completion: completion)
   }
 
   func observeRooms(completion: @escaping VoidBlock) {
-    let databaseRef = Database.database().reference()
-    databaseRef.child(Constants.ROOMS).observe(.childAdded) { snapshot,_  in
-      if let dataArray = snapshot.value as? [String: Any] {
-        if let roomName = dataArray[Constants.ROOM_NAME] as? String {
-          let room = Room(roomName: roomName, roomId: snapshot.key)
-          self.rooms.append(room)
-          completion()
-        }
-      }
+    repository.observeRooms { [weak self] room in
+      guard let self = self else { return }
+      self.rooms.append(room)
+      completion()
     }
   }
 
   func signOut (completion: @escaping VoidBlock) {
-    try! Auth.auth().signOut()
-    completion()
+    repository.signOut {
+      completion()
+    }
   }
 
   func isThereCurentUser() -> Bool {
-    if Auth.auth().currentUser == nil {
-      return false
-    }
-    return true
+    repository.isThereCurentUser()
   }
 }

@@ -1,24 +1,15 @@
 //
-//  ChatPresenter.swift
+//  NetworkManager+RoomChat.swift
 //  Linker
 //
-//  Created by Hossam on 18/10/2023.
+//  Created by Hossam on 21/10/2023.
 //
 
 import Foundation
 import Firebase
 
-class ChatPresenter {
-  var room: Room?
-  var chatMessages: [Message] = []
-  private let databaseReference = Database.database().reference()
-
-  init(with room: Room) {
-    self.room = room
-  }
-
-  func observeMessages(compeletion: @escaping VoidBlock) {
-    guard let roomId = room?.roomId else  { return }
+extension NetworkManager {
+  func observeMessages(roomId: String, compeletion: @escaping (Message) -> Void) {
     let messagesRef = databaseReference.child(Constants.ROOMS).child(roomId).child(Constants.MESSAGES)
 
     messagesRef.observe(.childAdded) { snapshot in
@@ -29,13 +20,12 @@ class ChatPresenter {
       else { return }
 
       let message = Message(messageKey: snapshot.key, senderName: senderName, messageText: messageText, senderId: senderId)
-      self.chatMessages.append(message)
-      compeletion()
+      compeletion(message)
     }
   }
 
-  func getUsernameWithId(uid: String, completion: @escaping (_ username: String?) -> Void) {
-    let user = databaseReference.child("users").child(uid).child(Constants.USERNAME)
+  private func getUsernameWithId(uid: String, completion: @escaping (_ username: String?) -> Void) {
+    let user = databaseReference.child(Constants.USERS).child(uid).child(Constants.USERNAME)
     user.observeSingleEvent(of: .value) { snapshot in
       completion(snapshot.value as? String)
     }
@@ -45,9 +35,8 @@ class ChatPresenter {
     return Auth.auth().currentUser?.uid
   }
 
-  func sendMessage(text: String, completion: @escaping (_ isSuccess: Bool) -> Void) {
-    guard let userId = Auth.auth().currentUser?.uid,
-          let roomId = room?.roomId else {
+  func sendMessage(roomId: String, text: String, completion: @escaping (_ isSuccess: Bool) -> Void) {
+    guard let userId = Auth.auth().currentUser?.uid else {
       completion(false)
       return
     }

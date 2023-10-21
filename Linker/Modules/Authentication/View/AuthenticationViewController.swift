@@ -11,14 +11,14 @@ import TextFieldEffects
 class AuthenticationViewController: UIViewController {
 
   @IBOutlet weak var collectionView: UICollectionView!
-  var presenter: AuthenticationPresenter!
+  var presenter: AuthenticationPresenterProtocol!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setupCollecionView()
     Utilities.handleKeyboardDismissing(self)
-    presenter = AuthenticationPresenter()
+    presenter = AuthenticationPresenter(repository: Repository(networkManager: NetworkManager()))
   }
 
   private func setupCollecionView() {
@@ -26,5 +26,3 @@ class AuthenticationViewController: UIViewController {
     collectionView.delegate = self
   }
 }
-
-
