@@ -14,8 +14,6 @@ protocol DependencyRegisteryProtocol {
 
 class DependencyRegistery: DependencyRegisteryProtocol {
 
-  
-
   var container: Container
 
   init(container: Container) {
