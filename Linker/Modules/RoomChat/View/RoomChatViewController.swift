@@ -14,14 +14,8 @@ class RoomChatViewController: UIViewController {
   @IBOutlet weak var chatTableView: UITableView!
   @IBOutlet weak var chatTF: UITextField!
 
-
-  init(with presenter: ChatPresenterProtocol) {
+  func configure(with presenter: ChatPresenterProtocol) {
     self.presenter = presenter
-    super.init(nibName: Constants.CHAT_ROOM_VIEW_CONTROLLER, bundle: nil)
-  }
-  
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
   
   override func viewDidLoad() {
