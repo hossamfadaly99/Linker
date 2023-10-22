@@ -118,6 +118,15 @@
       }
     },
     {
+      "identity" : "swinjectstoryboard",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/SwinjectStoryboard",
+      "state" : {
+        "revision" : "e4498ce2dfe37e1ca9d2d20af06fcc087507561c",
+        "version" : "2.2.3"
+      }
+    },
+    {
       "identity" : "textfieldeffects",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/raulriera/TextFieldEffects",

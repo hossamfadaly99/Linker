@@ -21,6 +21,9 @@
 		9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3A12AD36B7200E8E3D8 /* MessageCell.swift */; };
 		9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3A32AD3723B00E8E3D8 /* Message.swift */; };
 		9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3A52AD4097600E8E3D8 /* Utilities.swift */; };
+		9F36210C2AE49FEA00E70BF4 /* DependencyRegistery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36210B2AE49FEA00E70BF4 /* DependencyRegistery.swift */; };
+		9F36210E2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36210D2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift */; };
+		9F3621112AE4B87600E70BF4 /* SwinjectStoryboard in Frameworks */ = {isa = PBXBuildFile; productRef = 9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */; };
 		9F373D8D2AD2062C001C8DB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */; };
 		9F373D902AD207DA001C8DB3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D8F2AD207DA001C8DB3 /* FirebaseAnalytics */; };
 		9F373D922AD207DA001C8DB3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D912AD207DA001C8DB3 /* FirebaseAuth */; };
@@ -66,6 +69,8 @@
 		9F30C3A12AD36B7200E8E3D8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		9F30C3A32AD3723B00E8E3D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9F30C3A52AD4097600E8E3D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9F36210B2AE49FEA00E70BF4 /* DependencyRegistery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistery.swift; sourceTree = "<group>"; };
+		9F36210D2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F492E112ACFEE51009F4E01 /* Linker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F492E142ACFEE51009F4E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 				9F373D942AD207DA001C8DB3 /* FirebaseDatabase in Frameworks */,
 				9F373D962AD207DA001C8DB3 /* FirebaseStorage in Frameworks */,
 				9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */,
+				9F3621112AE4B87600E70BF4 /* SwinjectStoryboard in Frameworks */,
 				9F5F03A62AE2A9500090EA44 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +227,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9F36210A2AE49FCF00E70BF4 /* Dependancies */ = {
+			isa = PBXGroup;
+			children = (
+				9F36210B2AE49FEA00E70BF4 /* DependencyRegistery.swift */,
+				9F36210D2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift */,
+			);
+			path = Dependancies;
+			sourceTree = "<group>";
+		};
 		9F492E082ACFEE51009F4E01 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +255,7 @@
 		9F492E132ACFEE51009F4E01 /* Linker */ = {
 			isa = PBXGroup;
 			children = (
+				9F36210A2AE49FCF00E70BF4 /* Dependancies */,
 				9F5F03A72AE2AB270090EA44 /* Services */,
 				9F2EEB4B2ADF208200ACE8C6 /* Utilities */,
 				9F2EEB452ADE9C6200ACE8C6 /* Modules */,
@@ -312,6 +328,7 @@
 				9F373D932AD207DA001C8DB3 /* FirebaseDatabase */,
 				9F373D952AD207DA001C8DB3 /* FirebaseStorage */,
 				9F5F03A52AE2A9500090EA44 /* Swinject */,
+				9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */,
 			);
 			productName = Linker;
 			productReference = 9F492E112ACFEE51009F4E01 /* Linker.app */;
@@ -345,6 +362,7 @@
 				9F492E282ACFFA90009F4E01 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 				9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9F5F03A42AE2A9500090EA44 /* XCRemoteSwiftPackageReference "Swinject" */,
+				9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */,
 			);
 			productRefGroup = 9F492E122ACFEE51009F4E01 /* Products */;
 			projectDirPath = "";
@@ -376,6 +394,7 @@
 			files = (
 				9F5F03C32AE350DC0090EA44 /* Repository+Rooms.swift in Sources */,
 				9F2EEB5D2AE03E4900ACE8C6 /* ChatPresenter.swift in Sources */,
+				9F36210C2AE49FEA00E70BF4 /* DependencyRegistery.swift in Sources */,
 				9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */,
 				9F30C3A02AD2E35D00E8E3D8 /* RoomChatViewController.swift in Sources */,
 				9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */,
@@ -392,6 +411,7 @@
 				9F5F03AF2AE2AC2C0090EA44 /* NetworkEnums.swift in Sources */,
 				9F2EEB562AE0138200ACE8C6 /* RoomsViewController+TableView.swift in Sources */,
 				9F5F03AD2AE2AB780090EA44 /* NetworkManager.swift in Sources */,
+				9F36210E2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift in Sources */,
 				9F5F03B32AE2B9D50090EA44 /* Repository.swift in Sources */,
 				9F2EEB4F2ADF2AFC00ACE8C6 /* Constants.swift in Sources */,
 				9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */,
@@ -629,6 +649,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectStoryboard";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -656,6 +684,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */;
+			productName = SwinjectStoryboard;
+		};
 		9F373D8F2AD207DA001C8DB3 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

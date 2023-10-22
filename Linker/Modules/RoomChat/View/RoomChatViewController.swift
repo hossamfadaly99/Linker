@@ -9,11 +9,15 @@ import UIKit
 
 class RoomChatViewController: UIViewController {
 
-  var presenter: ChatPresenter!
+  var presenter: ChatPresenterProtocol!
 
   @IBOutlet weak var chatTableView: UITableView!
   @IBOutlet weak var chatTF: UITextField!
 
+  func configure(with presenter: ChatPresenterProtocol) {
+    self.presenter = presenter
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     

@@ -12,12 +12,22 @@ class RoomsViewController: UIViewController {
   @IBOutlet weak var roomTableView: UITableView!
   @IBOutlet weak var newRoomNameTF: UITextField!
 
+  typealias roomBlock = (Room) -> RoomChatViewController
   var presenter: RoomsPresenterProtocol!
+  var authenticationViewContoller: (() -> AuthenticationViewController)!
+  var roomChatViewContoller: ((Room) -> RoomChatViewController)!
 
+  func configure(with presenter: RoomsPresenterProtocol,
+                 authenticationViewContoller: @escaping () -> AuthenticationViewController,
+                 roomChatViewContoller: @escaping (Room) -> RoomChatViewController
+  ) {
+    self.presenter = presenter
+    self.authenticationViewContoller = authenticationViewContoller
+    self.roomChatViewContoller = roomChatViewContoller
+  }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      presenter = RoomsPresenter(repository: Repository(networkManager: NetworkManager()))
 
       setupTableView()
       presenter.observeRooms {
@@ -26,8 +36,8 @@ class RoomsViewController: UIViewController {
       Utilities.handleKeyboardDismissing(self)
     }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
     if !presenter.isThereCurentUser() {
       presentAuthenticationView()
@@ -57,9 +67,8 @@ class RoomsViewController: UIViewController {
   }
 
   private func presentAuthenticationView() {
-    let authViewController = storyboard?.instantiateViewController(identifier: Constants.AUTHENTICAION_VIEW_CONTROLLER) as! AuthenticationViewController
-    authViewController.modalPresentationStyle = .fullScreen
-    present(authViewController, animated: true)
+    let authVC = authenticationViewContoller()
+    present(authVC, animated: true)
   }
 }
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzd-l0-3Gv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -300,7 +301,7 @@
         <!--Room Chat View Controller-->
         <scene sceneID="frM-3c-FdZ">
             <objects>
-                <viewController storyboardIdentifier="chatRoomViewController" id="5oB-ux-P6V" customClass="RoomChatViewController" customModule="Linker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="roomChatViewController" id="5oB-ux-P6V" customClass="RoomChatViewController" customModule="Linker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uIn-2y-nBa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,6 +469,17 @@
             <point key="canvasLocation" x="870.99236641221376" y="-33.098591549295776"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0ec-ys-hys">
+            <size key="intrinsicContentSize" width="66" height="18.666666666666668"/>
+        </designable>
+        <designable name="ajQ-i0-fkE">
+            <size key="intrinsicContentSize" width="41" height="18.666666666666668"/>
+        </designable>
+        <designable name="dKR-b0-ahv">
+            <size key="intrinsicContentSize" width="62.333333333333336" height="17"/>
+        </designable>
+    </designables>
     <resources>
         <image name="LinkerLogo" width="375" height="375"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="123"/>
