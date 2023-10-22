@@ -13,6 +13,15 @@ class AuthenticationViewController: UIViewController {
   @IBOutlet weak var collectionView: UICollectionView!
   var presenter: AuthenticationPresenterProtocol!
 
+  init(with presenter: AuthenticationPresenterProtocol) {
+    self.presenter = presenter
+    super.init(nibName: Constants.AUTHENTICAION_VIEW_CONTROLLER, bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
