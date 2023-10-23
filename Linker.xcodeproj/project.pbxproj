@@ -7,23 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */; };
+		9F2EEB4D2ADF208F00ACE8C6 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB4C2ADF208F00ACE8C6 /* Validator.swift */; };
+		9F2EEB4F2ADF2AFC00ACE8C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB4E2ADF2AFC00ACE8C6 /* Constants.swift */; };
+		9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB532ADFFA7700ACE8C6 /* RoomsPresenter.swift */; };
+		9F2EEB562AE0138200ACE8C6 /* RoomsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB552AE0138200ACE8C6 /* RoomsViewController+TableView.swift */; };
+		9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB572AE03C8E00ACE8C6 /* Authentication+CollectionView.swift */; };
+		9F2EEB5D2AE03E4900ACE8C6 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB5C2AE03E4900ACE8C6 /* ChatPresenter.swift */; };
+		9F2EEB5F2AE04F5100ACE8C6 /* RoomChatViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EEB5E2AE04F5100ACE8C6 /* RoomChatViewController+TableView.swift */; };
+		9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */; };
+		9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39D2AD2DD1500E8E3D8 /* Room.swift */; };
+		9F30C3A02AD2E35D00E8E3D8 /* RoomChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C39F2AD2E35D00E8E3D8 /* RoomChatViewController.swift */; };
+		9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3A12AD36B7200E8E3D8 /* MessageCell.swift */; };
+		9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3A32AD3723B00E8E3D8 /* Message.swift */; };
+		9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3A52AD4097600E8E3D8 /* Utilities.swift */; };
+		9F36210C2AE49FEA00E70BF4 /* DependencyRegistery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36210B2AE49FEA00E70BF4 /* DependencyRegistery.swift */; };
+		9F36210E2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36210D2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift */; };
+		9F3621112AE4B87600E70BF4 /* SwinjectStoryboard in Frameworks */ = {isa = PBXBuildFile; productRef = 9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */; };
+		9F373D8D2AD2062C001C8DB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */; };
+		9F373D902AD207DA001C8DB3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D8F2AD207DA001C8DB3 /* FirebaseAnalytics */; };
+		9F373D922AD207DA001C8DB3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D912AD207DA001C8DB3 /* FirebaseAuth */; };
+		9F373D942AD207DA001C8DB3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D932AD207DA001C8DB3 /* FirebaseDatabase */; };
+		9F373D962AD207DA001C8DB3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9F373D952AD207DA001C8DB3 /* FirebaseStorage */; };
 		9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E142ACFEE51009F4E01 /* AppDelegate.swift */; };
 		9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */; };
-		9F492E192ACFEE51009F4E01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E182ACFEE51009F4E01 /* ViewController.swift */; };
+		9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */; };
 		9F492E1C2ACFEE51009F4E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1A2ACFEE51009F4E01 /* Main.storyboard */; };
 		9F492E1E2ACFEE52009F4E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */; };
 		9F492E212ACFEE52009F4E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F492E1F2ACFEE52009F4E01 /* LaunchScreen.storyboard */; };
+		9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9F492E292ACFFA90009F4E01 /* TextFieldEffects */; settings = {ATTRIBUTES = (Required, ); }; };
+		9F5F03A62AE2A9500090EA44 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 9F5F03A52AE2A9500090EA44 /* Swinject */; };
+		9F5F03AB2AE2AB690090EA44 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03AA2AE2AB690090EA44 /* Networkable.swift */; };
+		9F5F03AD2AE2AB780090EA44 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */; };
+		9F5F03AF2AE2AC2C0090EA44 /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */; };
+		9F5F03B12AE2AD4C0090EA44 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */; };
+		9F5F03B32AE2B9D50090EA44 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B22AE2B9D50090EA44 /* Repository.swift */; };
+		9F5F03B52AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */; };
+		9F5F03B72AE3452B0090EA44 /* ChatPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B62AE3452B0090EA44 /* ChatPresenterProtocol.swift */; };
+		9F5F03B92AE34D6A0090EA44 /* RoomPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03B82AE34D6A0090EA44 /* RoomPresenterProtocol.swift */; };
+		9F5F03BB2AE34E1E0090EA44 /* NetworkManager+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03BA2AE34E1E0090EA44 /* NetworkManager+Authentication.swift */; };
+		9F5F03BD2AE34E670090EA44 /* NetworkManager+Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03BC2AE34E670090EA44 /* NetworkManager+Rooms.swift */; };
+		9F5F03BF2AE34E740090EA44 /* NetworkManager+RoomChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03BE2AE34E740090EA44 /* NetworkManager+RoomChat.swift */; };
+		9F5F03C12AE350C20090EA44 /* Repository+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C02AE350C20090EA44 /* Repository+Authentication.swift */; };
+		9F5F03C32AE350DC0090EA44 /* Repository+Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */; };
+		9F5F03C52AE350E90090EA44 /* Repository+RoomChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */; };
+		9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E61252AD1506D00C339B2 /* FormCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenter.swift; sourceTree = "<group>"; };
+		9F2EEB4C2ADF208F00ACE8C6 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		9F2EEB4E2ADF2AFC00ACE8C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F2EEB532ADFFA7700ACE8C6 /* RoomsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPresenter.swift; sourceTree = "<group>"; };
+		9F2EEB552AE0138200ACE8C6 /* RoomsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomsViewController+TableView.swift"; sourceTree = "<group>"; };
+		9F2EEB572AE03C8E00ACE8C6 /* Authentication+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authentication+CollectionView.swift"; sourceTree = "<group>"; };
+		9F2EEB5C2AE03E4900ACE8C6 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		9F2EEB5E2AE04F5100ACE8C6 /* RoomChatViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomChatViewController+TableView.swift"; sourceTree = "<group>"; };
+		9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		9F30C39D2AD2DD1500E8E3D8 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		9F30C39F2AD2E35D00E8E3D8 /* RoomChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomChatViewController.swift; sourceTree = "<group>"; };
+		9F30C3A12AD36B7200E8E3D8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		9F30C3A32AD3723B00E8E3D8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9F30C3A52AD4097600E8E3D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9F36210B2AE49FEA00E70BF4 /* DependencyRegistery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistery.swift; sourceTree = "<group>"; };
+		9F36210D2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F492E112ACFEE51009F4E01 /* Linker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F492E142ACFEE51009F4E01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F492E182ACFEE51009F4E01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		9F492E1B2ACFEE51009F4E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F492E202ACFEE52009F4E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F492E222ACFEE52009F4E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F5F03AA2AE2AB690090EA44 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
+		9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		9F5F03B22AE2B9D50090EA44 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenterProtocol.swift; sourceTree = "<group>"; };
+		9F5F03B62AE3452B0090EA44 /* ChatPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenterProtocol.swift; sourceTree = "<group>"; };
+		9F5F03B82AE34D6A0090EA44 /* RoomPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPresenterProtocol.swift; sourceTree = "<group>"; };
+		9F5F03BA2AE34E1E0090EA44 /* NetworkManager+Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Authentication.swift"; sourceTree = "<group>"; };
+		9F5F03BC2AE34E670090EA44 /* NetworkManager+Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Rooms.swift"; sourceTree = "<group>"; };
+		9F5F03BE2AE34E740090EA44 /* NetworkManager+RoomChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+RoomChat.swift"; sourceTree = "<group>"; };
+		9F5F03C02AE350C20090EA44 /* Repository+Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Authentication.swift"; sourceTree = "<group>"; };
+		9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Rooms.swift"; sourceTree = "<group>"; };
+		9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+RoomChat.swift"; sourceTree = "<group>"; };
+		9F7E61252AD1506D00C339B2 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +102,140 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F373D902AD207DA001C8DB3 /* FirebaseAnalytics in Frameworks */,
+				9F373D922AD207DA001C8DB3 /* FirebaseAuth in Frameworks */,
+				9F373D942AD207DA001C8DB3 /* FirebaseDatabase in Frameworks */,
+				9F373D962AD207DA001C8DB3 /* FirebaseStorage in Frameworks */,
+				9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */,
+				9F3621112AE4B87600E70BF4 /* SwinjectStoryboard in Frameworks */,
+				9F5F03A62AE2A9500090EA44 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F2EEB452ADE9C6200ACE8C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB592AE03DFB00ACE8C6 /* RoomChat */,
+				9F2EEB502ADFF9E700ACE8C6 /* Rooms */,
+				9F2EEB462ADE9C7100ACE8C6 /* Authentication */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9F2EEB462ADE9C7100ACE8C6 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB482ADE9CA700ACE8C6 /* Presenter */,
+				9F2EEB472ADE9CA000ACE8C6 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		9F2EEB472ADE9CA000ACE8C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F492E182ACFEE51009F4E01 /* AuthenticationViewController.swift */,
+				9F7E61252AD1506D00C339B2 /* FormCell.swift */,
+				9F2EEB572AE03C8E00ACE8C6 /* Authentication+CollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F2EEB482ADE9CA700ACE8C6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB492ADF1AB700ACE8C6 /* AuthenticationPresenter.swift */,
+				9F5F03B42AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F2EEB4B2ADF208200ACE8C6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB4C2ADF208F00ACE8C6 /* Validator.swift */,
+				9F2EEB4E2ADF2AFC00ACE8C6 /* Constants.swift */,
+				9F30C3A52AD4097600E8E3D8 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9F2EEB502ADFF9E700ACE8C6 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB522ADFFA0400ACE8C6 /* Presenter */,
+				9F2EEB512ADFF9FE00ACE8C6 /* View */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		9F2EEB512ADFF9FE00ACE8C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C39A2AD2B88300E8E3D8 /* RoomsViewController.swift */,
+				9F2EEB552AE0138200ACE8C6 /* RoomsViewController+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F2EEB522ADFFA0400ACE8C6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB532ADFFA7700ACE8C6 /* RoomsPresenter.swift */,
+				9F5F03B82AE34D6A0090EA44 /* RoomPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F2EEB592AE03DFB00ACE8C6 /* RoomChat */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB5B2AE03E0600ACE8C6 /* Presenter */,
+				9F2EEB5A2AE03E0100ACE8C6 /* View */,
+			);
+			path = RoomChat;
+			sourceTree = "<group>";
+		};
+		9F2EEB5A2AE03E0100ACE8C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C39F2AD2E35D00E8E3D8 /* RoomChatViewController.swift */,
+				9F30C3A12AD36B7200E8E3D8 /* MessageCell.swift */,
+				9F2EEB5E2AE04F5100ACE8C6 /* RoomChatViewController+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F2EEB5B2AE03E0600ACE8C6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F2EEB5C2AE03E4900ACE8C6 /* ChatPresenter.swift */,
+				9F5F03B62AE3452B0090EA44 /* ChatPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F30C39C2AD2DD0100E8E3D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C39D2AD2DD1500E8E3D8 /* Room.swift */,
+				9F30C3A32AD3723B00E8E3D8 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F36210A2AE49FCF00E70BF4 /* Dependancies */ = {
+			isa = PBXGroup;
+			children = (
+				9F36210B2AE49FEA00E70BF4 /* DependencyRegistery.swift */,
+				9F36210D2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift */,
+			);
+			path = Dependancies;
+			sourceTree = "<group>";
+		};
 		9F492E082ACFEE51009F4E01 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +255,54 @@
 		9F492E132ACFEE51009F4E01 /* Linker */ = {
 			isa = PBXGroup;
 			children = (
+				9F36210A2AE49FCF00E70BF4 /* Dependancies */,
+				9F5F03A72AE2AB270090EA44 /* Services */,
+				9F2EEB4B2ADF208200ACE8C6 /* Utilities */,
+				9F2EEB452ADE9C6200ACE8C6 /* Modules */,
+				9F30C39C2AD2DD0100E8E3D8 /* Models */,
+				9F373D8C2AD2062C001C8DB3 /* GoogleService-Info.plist */,
 				9F492E142ACFEE51009F4E01 /* AppDelegate.swift */,
 				9F492E162ACFEE51009F4E01 /* SceneDelegate.swift */,
-				9F492E182ACFEE51009F4E01 /* ViewController.swift */,
 				9F492E1A2ACFEE51009F4E01 /* Main.storyboard */,
 				9F492E1D2ACFEE52009F4E01 /* Assets.xcassets */,
 				9F492E1F2ACFEE52009F4E01 /* LaunchScreen.storyboard */,
 				9F492E222ACFEE52009F4E01 /* Info.plist */,
 			);
 			path = Linker;
+			sourceTree = "<group>";
+		};
+		9F5F03A72AE2AB270090EA44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F03A92AE2AB4C0090EA44 /* Repository */,
+				9F5F03A82AE2AB370090EA44 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F5F03A82AE2AB370090EA44 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F03AA2AE2AB690090EA44 /* Networkable.swift */,
+				9F5F03AC2AE2AB780090EA44 /* NetworkManager.swift */,
+				9F5F03AE2AE2AC2C0090EA44 /* NetworkEnums.swift */,
+				9F5F03BA2AE34E1E0090EA44 /* NetworkManager+Authentication.swift */,
+				9F5F03BC2AE34E670090EA44 /* NetworkManager+Rooms.swift */,
+				9F5F03BE2AE34E740090EA44 /* NetworkManager+RoomChat.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F5F03A92AE2AB4C0090EA44 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F03B02AE2AD4C0090EA44 /* RepositoryProtocol.swift */,
+				9F5F03B22AE2B9D50090EA44 /* Repository.swift */,
+				9F5F03C02AE350C20090EA44 /* Repository+Authentication.swift */,
+				9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */,
+				9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +321,15 @@
 			dependencies = (
 			);
 			name = Linker;
+			packageProductDependencies = (
+				9F492E292ACFFA90009F4E01 /* TextFieldEffects */,
+				9F373D8F2AD207DA001C8DB3 /* FirebaseAnalytics */,
+				9F373D912AD207DA001C8DB3 /* FirebaseAuth */,
+				9F373D932AD207DA001C8DB3 /* FirebaseDatabase */,
+				9F373D952AD207DA001C8DB3 /* FirebaseStorage */,
+				9F5F03A52AE2A9500090EA44 /* Swinject */,
+				9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */,
+			);
 			productName = Linker;
 			productReference = 9F492E112ACFEE51009F4E01 /* Linker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +358,12 @@
 				Base,
 			);
 			mainGroup = 9F492E082ACFEE51009F4E01;
+			packageReferences = (
+				9F492E282ACFFA90009F4E01 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9F5F03A42AE2A9500090EA44 /* XCRemoteSwiftPackageReference "Swinject" */,
+				9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */,
+			);
 			productRefGroup = 9F492E122ACFEE51009F4E01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +381,7 @@
 				9F492E212ACFEE52009F4E01 /* LaunchScreen.storyboard in Resources */,
 				9F492E1E2ACFEE52009F4E01 /* Assets.xcassets in Resources */,
 				9F492E1C2ACFEE51009F4E01 /* Main.storyboard in Resources */,
+				9F373D8D2AD2062C001C8DB3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +392,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F492E192ACFEE51009F4E01 /* ViewController.swift in Sources */,
+				9F5F03C32AE350DC0090EA44 /* Repository+Rooms.swift in Sources */,
+				9F2EEB5D2AE03E4900ACE8C6 /* ChatPresenter.swift in Sources */,
+				9F36210C2AE49FEA00E70BF4 /* DependencyRegistery.swift in Sources */,
+				9F2EEB582AE03C8E00ACE8C6 /* Authentication+CollectionView.swift in Sources */,
+				9F30C3A02AD2E35D00E8E3D8 /* RoomChatViewController.swift in Sources */,
+				9F2EEB542ADFFA7700ACE8C6 /* RoomsPresenter.swift in Sources */,
+				9F5F03AB2AE2AB690090EA44 /* Networkable.swift in Sources */,
+				9F5F03B92AE34D6A0090EA44 /* RoomPresenterProtocol.swift in Sources */,
+				9F5F03B12AE2AD4C0090EA44 /* RepositoryProtocol.swift in Sources */,
+				9F30C3A22AD36B7200E8E3D8 /* MessageCell.swift in Sources */,
+				9F5F03B72AE3452B0090EA44 /* ChatPresenterProtocol.swift in Sources */,
+				9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */,
+				9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */,
+				9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */,
+				9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */,
+				9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */,
+				9F5F03AF2AE2AC2C0090EA44 /* NetworkEnums.swift in Sources */,
+				9F2EEB562AE0138200ACE8C6 /* RoomsViewController+TableView.swift in Sources */,
+				9F5F03AD2AE2AB780090EA44 /* NetworkManager.swift in Sources */,
+				9F36210E2AE4ACEB00E70BF4 /* SwinjectStoryboard+Extension.swift in Sources */,
+				9F5F03B32AE2B9D50090EA44 /* Repository.swift in Sources */,
+				9F2EEB4F2ADF2AFC00ACE8C6 /* Constants.swift in Sources */,
+				9F30C39B2AD2B88300E8E3D8 /* RoomsViewController.swift in Sources */,
+				9F5F03B52AE2BE430090EA44 /* AuthenticationPresenterProtocol.swift in Sources */,
+				9F2EEB5F2AE04F5100ACE8C6 /* RoomChatViewController+TableView.swift in Sources */,
 				9F492E152ACFEE51009F4E01 /* AppDelegate.swift in Sources */,
+				9F30C3A62AD4097600E8E3D8 /* Utilities.swift in Sources */,
+				9F2EEB4D2ADF208F00ACE8C6 /* Validator.swift in Sources */,
+				9F5F03BD2AE34E670090EA44 /* NetworkManager+Rooms.swift in Sources */,
+				9F5F03BB2AE34E1E0090EA44 /* NetworkManager+Authentication.swift in Sources */,
+				9F5F03C52AE350E90090EA44 /* Repository+RoomChat.swift in Sources */,
 				9F492E172ACFEE51009F4E01 /* SceneDelegate.swift in Sources */,
+				9F5F03BF2AE34E740090EA44 /* NetworkManager+RoomChat.swift in Sources */,
+				9F5F03C12AE350C20090EA44 /* Repository+Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +578,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +608,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +647,79 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectStoryboard";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		9F492E282ACFFA90009F4E01 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		9F5F03A42AE2A9500090EA44 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */;
+			productName = SwinjectStoryboard;
+		};
+		9F373D8F2AD207DA001C8DB3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9F373D912AD207DA001C8DB3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9F373D932AD207DA001C8DB3 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9F373D952AD207DA001C8DB3 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		9F492E292ACFFA90009F4E01 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F492E282ACFFA90009F4E01 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+		9F5F03A52AE2A9500090EA44 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F5F03A42AE2A9500090EA44 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9F492E092ACFEE51009F4E01 /* Project object */;
 }
