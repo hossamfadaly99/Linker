@@ -11,19 +11,17 @@ class RoomsViewController: UIViewController {
 
   @IBOutlet weak var roomTableView: UITableView!
   @IBOutlet weak var newRoomNameTF: UITextField!
+  weak var navigationCoordinator: NavigationCoordinatorProtocol?
 
   typealias roomBlock = (Room) -> RoomChatViewController
   var presenter: RoomsPresenterProtocol!
   var authenticationViewContoller: (() -> AuthenticationViewController)!
   var roomChatViewContoller: ((Room) -> RoomChatViewController)!
 
-  func configure(with presenter: RoomsPresenterProtocol,
-                 authenticationViewContoller: @escaping () -> AuthenticationViewController,
-                 roomChatViewContoller: @escaping (Room) -> RoomChatViewController
+  func configure(with presenter: RoomsPresenterProtocol, navigationCoordinator: NavigationCoordinatorProtocol
   ) {
     self.presenter = presenter
-    self.authenticationViewContoller = authenticationViewContoller
-    self.roomChatViewContoller = roomChatViewContoller
+    self.navigationCoordinator = navigationCoordinator
   }
   
     override func viewDidLoad() {
@@ -42,6 +40,11 @@ class RoomsViewController: UIViewController {
     if !presenter.isThereCurentUser() {
       presentAuthenticationView()
     }
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationCoordinator?.movingBack()
   }
 
   private func setupTableView() {
@@ -67,8 +70,9 @@ class RoomsViewController: UIViewController {
   }
 
   private func presentAuthenticationView() {
-    let authVC = authenticationViewContoller()
-    present(authVC, animated: true)
+    navigationCoordinator?.next(arguments: nil)
+//    let authVC = authenticationViewContoller()
+//    present(authVC, animated: true)
   }
 }
 

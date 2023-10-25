@@ -13,9 +13,11 @@ class RoomChatViewController: UIViewController {
 
   @IBOutlet weak var chatTableView: UITableView!
   @IBOutlet weak var chatTF: UITextField!
+  weak var navigationCoordinator: NavigationCoordinatorProtocol?
 
-  func configure(with presenter: ChatPresenterProtocol) {
+  func configure(with presenter: ChatPresenterProtocol, navigationCoordinator: NavigationCoordinatorProtocol) {
     self.presenter = presenter
+    self.navigationCoordinator = navigationCoordinator
   }
   
   override func viewDidLoad() {
@@ -27,6 +29,11 @@ class RoomChatViewController: UIViewController {
       self.chatTableView.scrollToRow(at: IndexPath(row: self.presenter.chatMessages.count - 1, section: 0), at: .bottom, animated: false)
     }
     Utilities.handleKeyboardDismissing(self)
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationCoordinator?.movingBack()
   }
 
   private func setupTableView() {

@@ -52,6 +52,7 @@
 		9F5F03C32AE350DC0090EA44 /* Repository+Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */; };
 		9F5F03C52AE350E90090EA44 /* Repository+RoomChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */; };
 		9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E61252AD1506D00C339B2 /* FormCell.swift */; };
+		9FF80A762AE9457A0068E145 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF80A752AE9457A0068E145 /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		9F5F03C22AE350DC0090EA44 /* Repository+Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Rooms.swift"; sourceTree = "<group>"; };
 		9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+RoomChat.swift"; sourceTree = "<group>"; };
 		9F7E61252AD1506D00C339B2 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
+		9FF80A752AE9457A0068E145 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 		9F492E132ACFEE51009F4E01 /* Linker */ = {
 			isa = PBXGroup;
 			children = (
+				9FF80A742AE93FC80068E145 /* NavigationCoordinators */,
 				9F36210A2AE49FCF00E70BF4 /* Dependancies */,
 				9F5F03A72AE2AB270090EA44 /* Services */,
 				9F2EEB4B2ADF208200ACE8C6 /* Utilities */,
@@ -303,6 +306,14 @@
 				9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		9FF80A742AE93FC80068E145 /* NavigationCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9FF80A752AE9457A0068E145 /* NavigationCoordinator.swift */,
+			);
+			path = NavigationCoordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 				9F5F03B72AE3452B0090EA44 /* ChatPresenterProtocol.swift in Sources */,
 				9F492E192ACFEE51009F4E01 /* AuthenticationViewController.swift in Sources */,
 				9F30C3A42AD3723B00E8E3D8 /* Message.swift in Sources */,
+				9FF80A762AE9457A0068E145 /* NavigationCoordinator.swift in Sources */,
 				9F2EEB4A2ADF1AB700ACE8C6 /* AuthenticationPresenter.swift in Sources */,
 				9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */,
 				9F30C39E2AD2DD1500E8E3D8 /* Room.swift in Sources */,

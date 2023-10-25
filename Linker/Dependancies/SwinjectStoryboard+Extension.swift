@@ -19,12 +19,15 @@ extension SwinjectStoryboard {
     
     func main() {
       dependencyRegistry.container.storyboardInitCompleted(RoomsViewController.self) { r, vc in
+
+        let coordinator = dependencyRegistry.makeRootNavigationCoordinator(rootViewController: vc)
+
+        AppDelegate.navigationCoordinator = coordinator
         
         let presenter = r.resolve(RoomsPresenterProtocol.self)!
         
         vc.configure(with: presenter,
-                     authenticationViewContoller: dependencyRegistry.makeAuthenticationViewController,
-                     roomChatViewContoller: dependencyRegistry.makeRoomChatViewController)
+                     navigationCoordinator: coordinator)
       }
     }
     main()
