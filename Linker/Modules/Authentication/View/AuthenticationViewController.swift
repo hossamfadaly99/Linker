@@ -12,9 +12,11 @@ class AuthenticationViewController: UIViewController {
 
   @IBOutlet weak var collectionView: UICollectionView!
   var presenter: AuthenticationPresenterProtocol!
+  weak var navigationCoordinator: NavigationCoordinatorProtocol?
 
-  func configure(with presenter: AuthenticationPresenterProtocol) {
+  func configure(with presenter: AuthenticationPresenterProtocol, navigationCoordinator: NavigationCoordinatorProtocol) {
     self.presenter = presenter
+    self.navigationCoordinator = navigationCoordinator
   }
   
   override func viewDidLoad() {
@@ -22,6 +24,11 @@ class AuthenticationViewController: UIViewController {
 
     setupCollecionView()
     Utilities.handleKeyboardDismissing(self)
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationCoordinator?.movingBack()
   }
 
   private func setupCollecionView() {
