@@ -53,6 +53,8 @@
 		9F5F03C52AE350E90090EA44 /* Repository+RoomChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F03C42AE350E90090EA44 /* Repository+RoomChat.swift */; };
 		9F7E61262AD1506D00C339B2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E61252AD1506D00C339B2 /* FormCell.swift */; };
 		9FF80A762AE9457A0068E145 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF80A752AE9457A0068E145 /* NavigationCoordinator.swift */; };
+		9FF80A792AE9C2120068E145 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF80A782AE9C2120068E145 /* RxCocoa */; };
+		9FF80A7B2AE9C2120068E145 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF80A7A2AE9C2120068E145 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,12 +106,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF80A7B2AE9C2120068E145 /* RxSwift in Frameworks */,
 				9F373D902AD207DA001C8DB3 /* FirebaseAnalytics in Frameworks */,
 				9F373D922AD207DA001C8DB3 /* FirebaseAuth in Frameworks */,
 				9F373D942AD207DA001C8DB3 /* FirebaseDatabase in Frameworks */,
 				9F373D962AD207DA001C8DB3 /* FirebaseStorage in Frameworks */,
 				9F492E2A2ACFFA90009F4E01 /* TextFieldEffects in Frameworks */,
 				9F3621112AE4B87600E70BF4 /* SwinjectStoryboard in Frameworks */,
+				9FF80A792AE9C2120068E145 /* RxCocoa in Frameworks */,
 				9F5F03A62AE2A9500090EA44 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +344,8 @@
 				9F373D952AD207DA001C8DB3 /* FirebaseStorage */,
 				9F5F03A52AE2A9500090EA44 /* Swinject */,
 				9F3621102AE4B87600E70BF4 /* SwinjectStoryboard */,
+				9FF80A782AE9C2120068E145 /* RxCocoa */,
+				9FF80A7A2AE9C2120068E145 /* RxSwift */,
 			);
 			productName = Linker;
 			productReference = 9F492E112ACFEE51009F4E01 /* Linker.app */;
@@ -374,6 +380,7 @@
 				9F373D8E2AD207DA001C8DB3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9F5F03A42AE2A9500090EA44 /* XCRemoteSwiftPackageReference "Swinject" */,
 				9F36210F2AE4B87600E70BF4 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */,
+				9FF80A772AE9C2120068E145 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 9F492E122ACFEE51009F4E01 /* Products */;
 			projectDirPath = "";
@@ -693,6 +700,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		9FF80A772AE9C2120068E145 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -730,6 +745,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F5F03A42AE2A9500090EA44 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		9FF80A782AE9C2120068E145 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF80A772AE9C2120068E145 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		9FF80A7A2AE9C2120068E145 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF80A772AE9C2120068E145 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
